@@ -1,0 +1,24 @@
+Destructuring assignment:
+ properties from objects, into distinct variables;
+   
+function asyncOperation() {
+ return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Async operation completed');
+    }, 1000);
+ });
+}
+
+async function asyncAwaitExample() {
+ console.log('Starting...');
+
+ const result = await asyncOperation();
+
+ console.log(result);
+ // Expected output: 'Async operation completed'
+}
+
+asyncAwaitExample();
+
+Starting...
+Async operation completed
